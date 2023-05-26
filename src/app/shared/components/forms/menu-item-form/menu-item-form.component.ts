@@ -1,13 +1,18 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { BaseMenuItem } from 'src/app/core';
 import { FormFieldModel } from '../form.model';
 import { MenuFormFields } from './menu-item-form.model';
+import { ButtonComponent } from '../../button/button.component';
+import { FormFieldComponent } from '../form-field/form-field.component';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-	selector: 'app-menu-item-form',
-	templateUrl: './menu-item-form.component.html',
-	styleUrls: ['../forms.scss']
+    selector: 'app-menu-item-form',
+    templateUrl: './menu-item-form.component.html',
+    styleUrls: ['../forms.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule, NgIf, NgFor, FormFieldComponent, ButtonComponent]
 })
 export class MenuItemFormComponent {
 	@Input() set menuItem(value: BaseMenuItem) {

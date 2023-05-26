@@ -40,7 +40,7 @@
 			>
 				<div class="nav-bar__menu-link">
 					<div class="nav-bar__menu-link-icon">
-						<fa-icon [icon]="config?.icon" size="lg"></fa-icon>
+						<span>icon</span>
 					</div>
 					<span class="nav-bar__menu-link-label">{{ config.label }}</span>
 				</div>
@@ -54,7 +54,7 @@
 		<a routerLink="/profile" routerLinkActive="nav-bar__user-info-link--active">
 			<div class="nav-bar__user-info-link">
 				<div class="nav-bar__user-info-avatar">
-					<fa-icon [icon]="faUser" size="lg"></fa-icon>
+					<span>icon</span>
 				</div>
 				<span class="nav-bar__user-info-name">
 					{{ (user$ | async)?.name || 'Auth0 Eats Teammate' }}

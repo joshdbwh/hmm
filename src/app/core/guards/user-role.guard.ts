@@ -1,17 +1,12 @@
 import { Injectable } from '@angular/core';
-import {
-	CanActivate,
-	Router,
-	ActivatedRouteSnapshot,
-	RouterStateSnapshot
-} from '@angular/router';
+import { Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { UserState } from '..';
 
 @Injectable({ providedIn: 'root' })
-export class UserRoleGuard implements CanActivate {
+export class UserRoleGuard  {
 	constructor(private router: Router, private store: Store) {}
 
 	canActivate(
